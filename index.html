@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team ReNew – KCT | Hydrogen Innovation</title>
+  <meta name="description" content="Team ReNew is a student innovation team from Kumaraguru College of Technology, Coimbatore, building hydrogen-powered vehicles for a sustainable future." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo">
+        <img src="images/logo.png" alt="Team ReNew Logo" class="logo-img" onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex'" />
+        <span id="logo-fallback" style="display:none;align-items:center;gap:8px"><span class="logo-icon">⚡</span><span class="logo-text">Team ReNew</span></span>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home"         class="nav-link active">Home</a>
+        <a href="#about"        class="nav-link">About</a>
+        <a href="#projects"     class="nav-link">Projects</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#activities"   class="nav-link">Activities</a>
+        <a href="#team"         class="nav-link">Team</a>
+        <a href="#gallery"      class="nav-link">Gallery</a>
+        <a href="#contact"      class="nav-link">Contact</a>
+      </nav>
+      <a href="#join" class="btn btn-primary nav-cta">Join Us</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO SLIDER -->
+  <section class="hero-slider" id="home">
+    <div class="slider-track" id="slider-track"></div>
+    <div class="slider-overlay">
+      <div class="hero-content">
+        <div class="hero-badge" id="hero-badge">EST. KCT</div>
+        <h1 class="hero-title" id="hero-heading">Driving the Future with<br /><span class="gradient-text">Green Hydrogen Innovation</span></h1>
+        <p class="hero-subtitle" id="hero-sub">Team ReNew is a student innovation team from Kumaraguru College of Technology, Coimbatore, focused on developing sustainable mobility solutions powered by renewable energy and green hydrogen technologies.</p>
+        <div class="hero-actions">
+          <a href="#about"    class="btn btn-primary btn-lg">Explore Our Journey</a>
+          <a href="#join"     class="btn btn-ghost btn-lg">Join the Mission</a>
+        </div>
+      </div>
+    </div>
+    <div class="slider-nav">
+      <button class="slider-arrow" id="slider-prev" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
+      <div class="slider-dots" id="slider-dots"></div>
+      <button class="slider-arrow" id="slider-next" aria-label="Next"><i data-lucide="chevron-right"></i></button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><span class="stat-num" data-count="3654">0</span><span class="stat-label">Community Reach</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-count="10">0</span><span class="stat-label">Competitions</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num" data-count="7">0</span><span class="stat-label">Departments</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-media">
+          <div class="about-img-wrap">
+            <img src="images/about.jpg" alt="Team ReNew" onerror="this.parentElement.innerHTML='<div class=\'about-img-placeholder\'><i data-lucide=\'image\' class=\'placeholder-icon\'></i><span>Team Photo</span></div>';lucide.createIcons()" />
+            <div class="about-img-accent"></div>
+          </div>
+          <div class="about-badge-card"><i data-lucide="award"></i><div><strong>Shell Eco-Marathon</strong><span>Asia Pacific 2026 – 3rd Place</span></div></div>
+        </div>
+        <div class="about-text">
+          <div class="section-tag">About Us</div>
+          <h2 class="section-title">Who We <span class="gradient-text">Are</span></h2>
+          <p class="about-desc">Team ReNew is a multidisciplinary student team dedicated to creating innovative and sustainable transportation solutions using renewable energy technologies. The team works on hydrogen-powered prototype vehicles, research projects, and advanced energy systems to promote clean mobility and environmental sustainability.</p>
+          <p class="about-desc">The team combines engineering, research, innovation, and teamwork to represent India on national and international platforms.</p>
+          <ul class="about-features">
+            <li><i data-lucide="check-circle"></i> Hydrogen-powered prototype vehicle design</li>
+            <li><i data-lucide="check-circle"></i> National &amp; international competition participation</li>
+            <li><i data-lucide="check-circle"></i> Hands-on workshops &amp; technical training</li>
+            <li><i data-lucide="check-circle"></i> Multidisciplinary cross-functional team</li>
+          </ul>
+          <a href="#join" class="btn btn-primary">Join Team ReNew</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION MISSION OBJECTIVE -->
+  <section class="vismis section" id="vision">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Our Foundation</div>
+        <h2 class="section-title">Vision, Mission &amp; <span class="gradient-text">Objective</span></h2>
+      </div>
+      <div class="vismis-grid">
+        <div class="vismis-card">
+          <div class="vismis-icon"><i data-lucide="eye"></i></div>
+          <h3>Vision</h3>
+          <p>To lead innovation in renewable energy and sustainable mobility by developing advanced hydrogen-powered transportation solutions for a greener future.</p>
+        </div>
+        <div class="vismis-card">
+          <div class="vismis-icon"><i data-lucide="target"></i></div>
+          <h3>Mission</h3>
+          <ul class="vismis-list">
+            <li>Develop efficient hydrogen-powered vehicles</li>
+            <li>Promote renewable energy awareness</li>
+            <li>Inspire students toward sustainable innovation</li>
+            <li>Represent India in global competitions</li>
+            <li>Contribute toward a greener future</li>
+          </ul>
+        </div>
+        <div class="vismis-card">
+          <div class="vismis-icon"><i data-lucide="flag"></i></div>
+          <h3>Objective</h3>
+          <p>To develop highly efficient hydrogen-powered prototype vehicles while enhancing innovation, technical excellence, and sustainable mobility through teamwork and engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Our Work</div>
+        <h2 class="section-title">Our <span class="gradient-text">Projects</span></h2>
+        <p class="section-sub">Engineering solutions that push the boundaries of sustainable mobility.</p>
+      </div>
+      <div class="projects-grid" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="achievements section" id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Milestones</div>
+        <h2 class="section-title">Our <span class="gradient-text">Achievements</span></h2>
+        <p class="section-sub">Recognition earned through innovation, dedication, and teamwork.</p>
+      </div>
+      <!-- Highlight card -->
+      <div class="achievement-highlight">
+        <div class="ach-hl-icon"><i data-lucide="trophy"></i></div>
+        <div>
+          <h3>3rd Position — 41st Shell Eco-Marathon 2026 Asia Pacific</h3>
+          <p>First Indian team to achieve a podium finish in the Hydrogen Prototype Category at the Lusail International Circuit, Doha, Qatar.</p>
+        </div>
+      </div>
+      <div class="achievements-grid" id="achievements-grid"></div>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section class="activities section" id="activities">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">What We Do</div>
+        <h2 class="section-title">Activities &amp; <span class="gradient-text">Events</span></h2>
+      </div>
+      <div class="activities-grid" id="activities-grid"></div>
+    </div>
+  </section>
+
+  <!-- OUTREACH -->
+  <section class="outreach section" id="outreach">
+    <div class="container">
+      <div class="outreach-grid">
+        <div>
+          <div class="section-tag">Community</div>
+          <h2 class="section-title">Outreach &amp; <span class="gradient-text">Impact</span></h2>
+          <p class="about-desc">Team ReNew actively spreads awareness about renewable energy and sustainable mobility through workshops, seminars, and campaigns.</p>
+          <ul class="about-features" id="outreach-list"></ul>
+        </div>
+        <div class="values-wrap">
+          <h3 class="values-title">Core Values</h3>
+          <div class="values-grid" id="values-grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team section" id="team">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">The People</div>
+        <h2 class="section-title">Meet Our <span class="gradient-text">Team</span></h2>
+      </div>
+      <div class="team-grid" id="team-grid"></div>
+      <div class="section-header" style="margin-top:60px;margin-bottom:32px">
+        <h3 class="section-title" style="font-size:1.6rem">Our <span class="gradient-text">Departments</span></h3>
+      </div>
+      <div class="dept-grid" id="dept-grid"></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Memories</div>
+        <h2 class="section-title">Our <span class="gradient-text">Gallery</span></h2>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightbox-close"><i data-lucide="x"></i></button>
+      <img src="" alt="" id="lightbox-img" />
+      <p id="lightbox-caption"></p>
+    </div>
+  </section>
+
+  <!-- BENEFITS / JOIN -->
+  <section class="benefits section" id="join">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Join Us</div>
+        <h2 class="section-title">Why Join <span class="gradient-text">Team ReNew?</span></h2>
+        <p class="section-sub">Passionate about innovation? Here's what you gain.</p>
+      </div>
+      <div class="benefits-grid" id="benefits-grid"></div>
+      <div class="join-cta">
+        <h3>Who Can Join?</h3>
+        <p>Students from Mechanical, Electrical, Electronics, CSE, AI&DS, Mechatronics, Management &amp; Media — anyone passionate about innovation and sustainability.</p>
+        <a href="mailto:teamrenew@kct.edu.in" class="btn btn-primary btn-lg">Apply Now →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-tag">Get In Touch</div>
+          <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+          <p class="contact-desc">Have questions or want to collaborate? Reach out — we'd love to hear from you.</p>
+          <div class="contact-items">
+            <div class="contact-item"><div class="contact-item-icon"><i data-lucide="mail"></i></div><div><strong>Email</strong><span>teamrenew@kct.edu.in</span></div></div>
+            <div class="contact-item"><div class="contact-item-icon"><i data-lucide="map-pin"></i></div><div><strong>Address</strong><span>Kumaraguru College of Technology, Coimbatore, Tamil Nadu – 641049</span></div></div>
+          </div>
+          <div class="social-links" id="social-links"></div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group"><label for="cf-name">Your Name</label><input type="text" id="cf-name" placeholder="e.g. Priya" required /></div>
+            <div class="form-group"><label for="cf-email">Email</label><input type="email" id="cf-email" placeholder="you@example.com" required /></div>
+            <div class="form-group"><label for="cf-subject">Subject</label><input type="text" id="cf-subject" placeholder="How can we help?" /></div>
+            <div class="form-group"><label for="cf-message">Message</label><textarea id="cf-message" rows="5" placeholder="Tell us more..." required></textarea></div>
+            <button type="submit" class="btn btn-primary btn-full"><span>Send Message</span><i data-lucide="send"></i></button>
+            <div class="form-success" id="form-success"><i data-lucide="check-circle"></i><span>Message sent! We'll get back to you soon.</span></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <img src="images/logo.png" alt="Team ReNew" class="logo-img" style="height:36px" onerror="this.style.display='none'" />
+            <span class="logo-text">Team ReNew</span>
+          </a>
+          <p class="footer-tagline">Powered by Hydrogen, Driven by Innovation.</p>
+          <p class="footer-tagline" style="margin-top:4px;font-size:.8rem">Kumaraguru College of Technology, Coimbatore</p>
+        </div>
+        <div class="footer-links-group"><h4>Navigate</h4><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a></div>
+        <div class="footer-links-group"><h4>More</h4><a href="#activities">Activities</a><a href="#team">Team</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+        <div class="footer-links-group"><h4>Follow Us</h4><div id="footer-socials"></div></div>
+      </div>
+      <div class="footer-bottom"><span>© 2025 Team ReNew – KCT. All rights reserved.</span><span>Engineering a Greener Future 🌿</span></div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
