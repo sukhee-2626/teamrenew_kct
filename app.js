@@ -179,7 +179,21 @@ document.getElementById('contact-form').addEventListener('submit', async e => {
   
   try {
     const formData = new FormData(form);
-    await fetch(CLUB_DATA.googleSheetUrl, { method: 'POST', body: formData });
+    const data = {
+      name: formData.get('Name'),
+      email: formData.get('Email'),
+      subject: formData.get('Subject'),
+      message: formData.get('Message'),
+      date: new Date().toLocaleString(),
+      timestamp: new Date().toISOString()
+    };
+
+    await fetch(CLUB_DATA.googleSheetUrl, { 
+      method: 'POST', 
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(data) 
+    });
+    
     document.getElementById('form-success').classList.add('show');
     form.reset();
     setTimeout(() => document.getElementById('form-success').classList.remove('show'), 4000);
