@@ -136,7 +136,7 @@ const CLUB_DATA = {
   youtubeShort: "KH3aDdGbK1U",
 
   team: [
-    { name: "Shobika",   role: "Team Lead",         photo: "", bio: "Driving the team's vision for clean energy innovation." },
+    { name: "Shobika",   role: "Team Lead",         photo: "images/shobika.jpg", bio: "Driving the team's vision for clean energy innovation." },
     { name: "Thoufiq S", role: "Technical Head",    photo: "", bio: "Leading the design and fabrication of hydrogen prototypes." },
     { name: "Revathi",   role: "Research & Design", photo: "", bio: "Coordinating research, design, and team communications." },
   ],
