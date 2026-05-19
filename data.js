@@ -4,10 +4,10 @@ const CLUB_DATA = {
   location: "Coimbatore, Tamil Nadu, India",
 
   heroSlides: [
-    { image: "baner/1.png", label: "Team ReNew" },
-    { image: "baner/2.png", label: "Shell Eco-Marathon" },
-    { image: "baner/3.png", label: "3rd Position – Asia Pacific 2026" },
-    { image: "baner/4.png", label: "Inside Our Vehicle" },
+    { image: "banner/Screenshot 2026-05-19 114511.png", label: "Team ReNew" },
+    { image: "banner/2.png", label: "Shell Eco-Marathon" },
+    { image: "banner/3.png", label: "3rd Position – Asia Pacific 2026" },
+    { image: "banner/4.png", label: "Inside Our Vehicle" },
   ],
 
   tagline: "Powered by Hydrogen, Driven by Innovation.",
