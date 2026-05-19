@@ -65,25 +65,24 @@ ul { list-style: none; }
 }
 
 /* ===== HERO SLIDER ===== */
-.hero-slider { position: relative; height: 100vh; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.hero-slider { position: relative; width: 100%; margin-top: 78px; max-height: calc(100vh - 78px); aspect-ratio: 16/9; overflow: hidden; background: #000; }
 .slider-track { position: absolute; inset: 0; }
-.slide { position: absolute; inset: 0; opacity: 0; transition: opacity .9s ease; }
-.slide.active { opacity: 1; }
-.slide img { width: 100%; height: 100%; object-fit: cover; }
-.slider-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(6,13,10,.55) 0%, rgba(6,13,10,.75) 60%, var(--bg) 100%); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 0; padding: 0 24px; text-align: center; }
-.hero-content { max-width: 820px; }
-.hero-badge { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--green); background: rgba(34,197,94,.1); border: 1px solid var(--border); padding: 6px 18px; border-radius: 999px; display: inline-block; margin-bottom: 20px; }
-.hero-title { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.15; margin-bottom: 18px; color: var(--white); }
-.hero-subtitle { color: rgba(232,245,238,.75); font-size: 1rem; line-height: 1.7; margin-bottom: 32px; max-width: 640px; margin-left: auto; margin-right: auto; }
-.hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 0; }
-.slider-nav { position: absolute; bottom: 96px; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 16px; z-index: 10; }
-.slider-arrow { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); color: var(--white); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
+.slide { position: absolute; inset: 0; opacity: 0; transition: opacity .9s ease; display: flex; justify-content: center; align-items: center; }
+.slide.active { opacity: 1; z-index: 1; }
+.slide img { width: 100%; height: 100%; object-fit: contain; }
+.slider-nav { position: absolute; bottom: 20px; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 16px; z-index: 10; }
+.slider-arrow { background: rgba(0,0,0,.5); border: 1px solid rgba(255,255,255,.2); color: var(--white); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
 .slider-arrow:hover { background: var(--green); border-color: var(--green); color: #000; }
 .slider-arrow svg { width: 18px; height: 18px; }
 .slider-dots { display: flex; gap: 8px; }
 .slider-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.3); border: none; cursor: pointer; transition: var(--transition); padding: 0; }
 .slider-dot.active { background: var(--green); width: 24px; border-radius: 4px; }
-.hero-stats { position: absolute; bottom: 0; left: 0; right: 0; display: flex; justify-content: center; background: rgba(6,13,10,.85); backdrop-filter: blur(12px); border-top: 1px solid var(--border); padding: 20px 40px; gap: 0; }
+
+/* ===== HERO INTRO ===== */
+.hero-intro { background: var(--bg); padding: 60px 0 20px; }
+.hero-badge { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--green); background: rgba(34,197,94,.1); border: 1px solid var(--border); padding: 6px 18px; border-radius: 999px; display: inline-block; margin-bottom: 20px; }
+.hero-title { font-family: var(--serif); font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.15; margin-bottom: 18px; }
+.hero-stats { display: flex; justify-content: center; gap: 0; }
 .stat { text-align: center; padding: 0 40px; }
 .stat-num { font-size: 2rem; font-weight: 700; color: var(--green); display: block; }
 .stat-label { font-size: .75rem; color: var(--muted); margin-top: 2px; text-transform: uppercase; letter-spacing: .06em; }
