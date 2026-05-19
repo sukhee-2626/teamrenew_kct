@@ -14,7 +14,7 @@ const CLUB_DATA = {
   established: "KCT",
   copyright: "© 2025 Team ReNew – KCT. All rights reserved.",
   logo: "images/logo.png",
-  googleSheetUrl: "", // Paste your Google Apps Script Web App URL here
+  googleSheetUrl: "https://script.google.com/macros/s/AKfycbyiZEuEgsnUOj3w-_mUFzgGK8qkMNa5_x8QgUF9_-PCmKurv6b_14ZxwtzHyqxfl6Bc5w/exec", // Paste your Google Apps Script Web App URL here
 
   hero: {
     heading: "Driving the Future with Green Hydrogen Innovation",
