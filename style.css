@@ -78,23 +78,23 @@ ul { list-style: none; }
 }
 
 /* ===== DOODLE CAR ===== */
-.doodle-car { position: fixed; bottom: 20px; left: 0; z-index: 9999; pointer-events: none; animation: driveCar 14s linear infinite; }
-.doodle-car svg { width: 56px; height: 56px; stroke: var(--green); fill: rgba(34,197,94,0.15); stroke-width: 1.5px; }
-@keyframes driveCar {
-  0% { transform: translateX(-100px) scaleX(1); }
-  49.9% { transform: translateX(calc(100vw + 100px)) scaleX(1); }
-  50% { transform: translateX(calc(100vw + 100px)) scaleX(-1); }
-  99.9% { transform: translateX(-100px) scaleX(-1); }
-  100% { transform: translateX(-100px) scaleX(1); }
+.doodle-car { position: fixed; top: 62px; bottom: auto; left: 0; z-index: 1001; pointer-events: none; animation: raceCar 4s linear infinite; }
+.doodle-car svg { width: 32px; height: 32px; stroke: var(--green); fill: rgba(34,197,94,0.8); stroke-width: 1.5px; filter: drop-shadow(0 0 5px var(--green)); }
+@keyframes raceCar {
+  0% { transform: translateX(-50px) scaleX(1); }
+  49.9% { transform: translateX(calc(100vw + 50px)) scaleX(1); }
+  50% { transform: translateX(calc(100vw + 50px)) scaleX(-1); }
+  99.9% { transform: translateX(-50px) scaleX(-1); }
+  100% { transform: translateX(-50px) scaleX(1); }
 }
 
 /* ===== HERO SLIDER ===== */
-.hero-slider { position: relative; width: 100%; height: 100vh; overflow: hidden; background: var(--bg); margin-top: 74px; max-height: calc(100vh - 74px); }
+.hero-slider { position: relative; width: 100%; aspect-ratio: 16/9; max-height: calc(100vh - 74px); margin-top: 74px; overflow: hidden; background: var(--bg); }
 .slider-track { position: absolute; inset: 0; }
 .slide { position: absolute; inset: 0; opacity: 0; transition: opacity .9s ease; display: flex; justify-content: center; align-items: center; }
 .slide.active { opacity: 1; z-index: 1; }
-.slide::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 180px; background: linear-gradient(to bottom, transparent, var(--bg)); pointer-events: none; z-index: 2; }
-.slide img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.slide::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to bottom, transparent, var(--bg)); pointer-events: none; z-index: 2; }
+.slide img { width: 100%; height: 100%; object-fit: contain; object-position: center; }
 .slider-nav { position: absolute; bottom: 20px; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 16px; z-index: 10; }
 .slider-arrow { background: rgba(0,0,0,.5); border: 1px solid rgba(255,255,255,.2); color: var(--white); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: var(--transition); }
 .slider-arrow:hover { background: var(--green); border-color: var(--green); color: #000; }
