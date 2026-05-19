@@ -130,14 +130,18 @@ const CLUB_DATA = {
     { id: 3, image: "images/gallery3.jpg", caption: "" },
     { id: 4, image: "images/gallery4.jpg", caption: "" },
     { id: 5, image: "images/gallery5.jpg", caption: "" },
+    { id: 6, image: "banner/Screenshot 2026-05-19 114511.png", caption: "" },
+    { id: 7, image: "banner/2.png", caption: "" },
+    { id: 8, image: "banner/3.png", caption: "" },
+    { id: 9, image: "banner/4.png", caption: "" },
   ],
 
   youtubeShort: "KH3aDdGbK1U",
 
   team: [
-    { name: "Shobika",   role: "Team Lead",         photo: "images/shobika.jpg", bio: "Driving the team's vision for clean energy innovation." },
-    { name: "Thoufiq S", role: "Technical Head",    photo: "", bio: "Leading the design and fabrication of hydrogen prototypes." },
-    { name: "Revathi",   role: "Research & Design", photo: "", bio: "Coordinating research, design, and team communications." },
+    { name: "Shobika",   photo: "images/shobika.jpg", bio: "Driving the team's vision for clean energy innovation." },
+    { name: "Thoufiq S", photo: "", bio: "Leading the design and fabrication of hydrogen prototypes." },
+    { name: "Revathi",   photo: "", bio: "Coordinating research, design, and team communications." },
   ],
 
   outreach: [

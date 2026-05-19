@@ -115,7 +115,7 @@ function renderTeam() {
   g.innerHTML = CLUB_DATA.team.map(m => {
     const initials = m.name.split(' ').map(w => w[0]).join('').substring(0, 2);
     const photo = m.photo ? `<img src="${m.photo}" alt="${m.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" /><span class="team-initials" style="display:none">${initials}</span>` : `<span class="team-initials">${initials}</span>`;
-    return `<div class="team-card"><div class="team-photo">${photo}</div><div class="team-name">${m.name}</div><div class="team-role">${m.role}</div><p class="team-bio">${m.bio}</p></div>`;
+    return `<div class="team-card"><div class="team-photo">${photo}</div><div class="team-name">${m.name}</div><p class="team-bio">${m.bio}</p></div>`;
   }).join('');
   const dg = document.getElementById('dept-grid');
   if (dg) dg.innerHTML = CLUB_DATA.departments.map(d => `<div class="dept-card"><div class="activity-icon">${icon(d.icon)}</div><span>${d.name}</span></div>`).join('');
