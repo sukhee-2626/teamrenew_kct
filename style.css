@@ -50,8 +50,8 @@ ul { list-style: none; }
 .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 32px; }
 .nav-logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.6rem; color: var(--white); text-shadow: 0 0 10px rgba(255,255,255,0.2); }
 .logo-icon { color: var(--primary); font-size: 1.4rem; filter: drop-shadow(0 0 8px var(--primary)); }
-.nav-logo img.logo-img { height: 50px; width: auto; object-fit: contain; filter: drop-shadow(0 0 4px rgba(255,255,255,0.4)); transform: scale(1.4); transform-origin: left center; transition: transform 0.3s ease; }
-.nav-logo:hover img.logo-img { transform: scale(1.5); }
+.nav-logo img.logo-img { height: 60px; width: auto; object-fit: contain; filter: drop-shadow(0 0 4px rgba(255,255,255,0.4)); transform: scale(1.6); transform-origin: left center; transition: transform 0.3s ease; }
+.nav-logo:hover img.logo-img { transform: scale(1.7); }
 .nav-links { display: flex; gap: 12px; margin-left: auto; }
 .nav-link { position: relative; padding: 8px 16px; border-radius: 8px; font-size: .95rem; color: var(--muted); transition: all 0.3s ease; font-weight: 500; }
 .nav-link::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 0; height: 2px; background: var(--primary); transition: width 0.3s ease; box-shadow: 0 0 8px var(--primary); }
