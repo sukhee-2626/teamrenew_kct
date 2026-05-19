@@ -125,12 +125,11 @@ const CLUB_DATA = {
   ],
 
   gallery: [
-    { id: 1, image: "images/gallery1.jpg", caption: "Vehicle Build Session" },
-    { id: 2, image: "images/gallery2.jpg", caption: "Competition Day" },
-    { id: 3, image: "images/gallery3.jpg", caption: "Team Workshop" },
-    { id: 4, image: "images/gallery4.jpg", caption: "Design Review" },
-    { id: 5, image: "images/gallery5.jpg", caption: "Lab Testing" },
-    { id: 6, image: "images/gallery6.jpg", caption: "Presentation Night" },
+    { id: 1, image: "images/gallery1.jpg", caption: "" },
+    { id: 2, image: "images/gallery2.jpg", caption: "" },
+    { id: 3, image: "images/gallery3.jpg", caption: "" },
+    { id: 4, image: "images/gallery4.jpg", caption: "" },
+    { id: 5, image: "images/gallery5.jpg", caption: "" },
   ],
 
   youtubeShort: "KH3aDdGbK1U",
