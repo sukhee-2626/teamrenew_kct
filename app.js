@@ -163,11 +163,34 @@ function renderSocials() {
 }
 
 /* ===== CONTACT FORM ===== */
-document.getElementById('contact-form').addEventListener('submit', e => {
+document.getElementById('contact-form').addEventListener('submit', async e => {
   e.preventDefault();
-  document.getElementById('form-success').classList.add('show');
-  e.target.reset();
-  setTimeout(() => document.getElementById('form-success').classList.remove('show'), 4000);
+  const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  const originalText = btn.innerHTML;
+  
+  if (!CLUB_DATA.googleSheetUrl) {
+    alert("Please add your Google Apps Script Web App URL to data.js first.");
+    return;
+  }
+  
+  btn.innerHTML = `<span>Sending...</span>`;
+  btn.disabled = true;
+  
+  try {
+    const formData = new FormData(form);
+    await fetch(CLUB_DATA.googleSheetUrl, { method: 'POST', body: formData });
+    document.getElementById('form-success').classList.add('show');
+    form.reset();
+    setTimeout(() => document.getElementById('form-success').classList.remove('show'), 4000);
+  } catch (error) {
+    console.error('Error!', error.message);
+    alert("There was an error sending your message. Please try again.");
+  } finally {
+    btn.innerHTML = originalText;
+    btn.disabled = false;
+    lucide.createIcons();
+  }
 });
 
 /* ===== INIT ===== */
