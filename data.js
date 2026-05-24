@@ -143,15 +143,15 @@ const CLUB_DATA = {
     { name: "Revathi Chinnadurai", role: "Operations & Strategy Lead", category: "Leadership & Management", photo: "" },
     { name: "Harsini", role: "Strategic Alliances Analyst", category: "Leadership & Management", photo: "" },
     { name: "Brindha", role: "Creative Media Specialist", category: "Leadership & Management", photo: "" },
-    { name: "Ritik RG", role: "Product Design Engineer", category: "Engineering Division", photo: "" },
+    { name: "Ritik RG", role: "Product Design Engineer", category: "Engineering Division", photo: "images/ritik.jpg" },
     { name: "Thoufiq", role: "Design & CAD Engineer", category: "Engineering Division", photo: "" },
-    { name: "Baasim Hyder", role: "Powertrain Systems Engineer", category: "Engineering Division", photo: "" },
+    { name: "Baasim Hyder", role: "Powertrain Systems Engineer", category: "Engineering Division", photo: "images/baasim.jpg" },
     { name: "Pawan", role: "Powertrain Analyst", category: "Engineering Division", photo: "" },
     { name: "Dhansri MR", role: "Data & Telemetry Engineer", category: "Engineering Division", photo: "" },
     { name: "Hariharan", role: "Embedded Systems Analyst", category: "Engineering Division", photo: "" },
     { name: "Shobika K", role: "AI/ML Systems Engineer", category: "Engineering Division", photo: "images/shobika.jpg" },
     { name: "Ragini Vetrivel", role: "Fuel Cell Systems Engineer", category: "Engineering Division", photo: "" },
-    { name: "Hariprasadh", role: "Machining & Fabrication Specialist", category: "Engineering Division", photo: "" }
+    { name: "Hariprasadh", role: "Machining & Fabrication Specialist", category: "Engineering Division", photo: "images/hariprasadh.jpg" }
   ],
 
   outreach: [
