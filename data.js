@@ -140,11 +140,11 @@ const CLUB_DATA = {
 
   team: [
     { name: "Aswin Karthik", role: "Team Captain", category: "Leadership & Management", photo: "" },
-    { name: "Revathi Chinnadurai", role: "Operations & Strategy Lead", category: "Leadership & Management", photo: "" },
+    { name: "Revathi Chinnadurai", role: "Operations & Strategy Lead", category: "Leadership & Management", photo: "images/revathi.jpg" },
     { name: "Harsini", role: "Strategic Alliances Analyst", category: "Leadership & Management", photo: "" },
     { name: "Brindha", role: "Creative Media Specialist", category: "Leadership & Management", photo: "" },
     { name: "Ritik RG", role: "Product Design Engineer", category: "Engineering Division", photo: "images/ritik.jpg" },
-    { name: "Thoufiq", role: "Design & CAD Engineer", category: "Engineering Division", photo: "" },
+    { name: "Thoufiq", role: "Design & CAD Engineer", category: "Engineering Division", photo: "images/thoufiq.jpg" },
     { name: "Baasim Hyder", role: "Powertrain Systems Engineer", category: "Engineering Division", photo: "images/baasim.jpg" },
     { name: "Pawan", role: "Powertrain Analyst", category: "Engineering Division", photo: "" },
     { name: "Dhansri MR", role: "Data & Telemetry Engineer", category: "Engineering Division", photo: "" },
