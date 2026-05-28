@@ -722,3 +722,127 @@ header, section, footer, .doodle-car { position: relative; z-index: 1; }
   0%, 100% { box-shadow: 0 0 10px rgba(0,180,255,0.12); }
   50%       { box-shadow: 0 0 22px rgba(0,180,255,0.30), 0 0 6px rgba(0,180,255,0.15); }
 }
+
+/* =============================================
+   MOVING CARD ANIMATIONS
+   ============================================= */
+
+/* Keyframes library */
+@keyframes floatRing {
+  0%   { transform: translate(0,0) scale(1); opacity:.8; }
+  50%  { transform: translate(-8px,-10px) scale(1.1); opacity:1; }
+  100% { transform: translate(5px,6px) scale(.93); opacity:.65; }
+}
+@keyframes spinArc {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes spinSlow {
+  from { transform: rotate(0deg) scale(1); }
+  to   { transform: rotate(360deg) scale(1); }
+}
+@keyframes beadPulse {
+  0%,100% { transform:translateY(-50%) scale(1);   box-shadow:0 0 8px rgba(0,180,255,.55); }
+  50%     { transform:translateY(-50%) scale(1.6); box-shadow:0 0 20px rgba(0,180,255,.9); }
+}
+@keyframes bubbleFloat {
+  0%   { transform:translate(0,0) scale(1); }
+  50%  { transform:translate(-7px,9px) scale(1.14); }
+  100% { transform:translate(5px,-6px) scale(.91); }
+}
+@keyframes ringPulse {
+  0%,100% { transform:scale(1);    opacity:1; }
+  50%     { transform:scale(1.22); opacity:.45; }
+}
+@keyframes dotDrift {
+  0%   { background-position: right 10px bottom 10px; }
+  50%  { background-position: right 2px bottom 2px; }
+  100% { background-position: right 10px bottom 10px; }
+}
+@keyframes dotDriftL {
+  0%   { background-position: left 10px bottom 10px; }
+  50%  { background-position: left 2px bottom 2px; }
+  100% { background-position: left 10px bottom 10px; }
+}
+@keyframes leftBarGlow {
+  0%,100% { box-shadow:-2px 0 12px rgba(0,180,255,.18),0 2px 8px rgba(0,180,255,.05); }
+  50%     { box-shadow:-5px 0 26px rgba(0,180,255,.42),0 2px 12px rgba(0,180,255,.10); }
+}
+@keyframes orbitArc {
+  from { transform:rotate(0deg); }
+  to   { transform:rotate(-360deg); }
+}
+@keyframes ctaGlow {
+  0%,100% { border-color:rgba(0,180,255,.07); }
+  50%     { border-color:rgba(0,180,255,.25); box-shadow:0 0 22px rgba(0,180,255,.18); }
+}
+@keyframes tagShimmer {
+  0%  { left:-100%; }
+  55% { left:140%; }
+  100%{ left:140%; }
+}
+@keyframes radialPan {
+  0%   { opacity:.6; }
+  100% { opacity:1; }
+}
+
+/* VISMIS: dot grid drifts + corner ring floats */
+.vismis-card { animation: dotDrift 10s ease-in-out infinite; }
+.vismis-card::after { animation: floatRing 6s ease-in-out infinite alternate; }
+
+/* PROJECT: dot grid drifts + arc spins */
+.project-card { animation: dotDriftL 12s ease-in-out infinite; }
+.project-card::after { animation: spinArc 9s linear infinite; }
+
+/* ACTIVITY: left bar glow pulses */
+.activity-card { animation: leftBarGlow 3s ease-in-out infinite; }
+
+/* BENEFIT: corner bubble floats */
+.benefit-card::before { animation: bubbleFloat 5s ease-in-out infinite alternate; }
+
+/* ACHIEVEMENT ITEMS: bead pulses */
+.ach-item::before { animation: beadPulse 2.4s ease-in-out infinite; }
+
+/* ACHIEVEMENT HIGHLIGHT: corner ring floats */
+.achievement-highlight::after { animation: floatRing 7s ease-in-out infinite alternate; }
+
+/* TEAM: top glow pans + bottom-right ring spins */
+.team-card::before { animation: radialPan 5s ease-in-out infinite alternate; }
+.team-card::after {
+  content: '';
+  position: absolute;
+  bottom: -18px; right: -18px;
+  width: 68px; height: 68px;
+  border-radius: 50%;
+  border: 13px solid rgba(0,180,255,.09);
+  pointer-events: none;
+  animation: spinArc 14s linear infinite;
+}
+
+/* DEPT: bottom ring spins */
+.dept-card::before { animation: spinSlow 12s linear infinite; }
+
+/* GALLERY: corner arc orbits */
+.gallery-item::after { animation: orbitArc 8s linear infinite; }
+
+/* PLAN: corner ring pulses */
+.plan-card::after { animation: ringPulse 4s ease-in-out infinite; }
+
+/* JOIN CTA: rings rotate + glow pulse */
+.join-cta::before { animation: ctaRing 9s linear infinite, ctaGlow 4s ease-in-out infinite; }
+.join-cta::after  { animation: ctaRing 11s linear infinite reverse, ctaGlow 5s ease-in-out infinite 1s; }
+
+/* SECTION TAG: shimmer sweep */
+.section-tag { position:relative; overflow:hidden; }
+.section-tag::after {
+  content:'';
+  position:absolute;
+  top:0; left:-100%;
+  width:60%; height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);
+  animation: tagShimmer 3.5s ease-in-out infinite;
+}
+
+/* Pause dot-drift animation on hover so card lifts cleanly */
+.vismis-card:hover,
+.project-card:hover { animation-play-state: paused; }
