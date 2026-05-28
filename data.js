@@ -32,7 +32,7 @@ const CLUB_DATA = {
   ],
 
   about: {
-    image: "images/about.jpg",
+    image: "images/about-new.png",
     badge: "Shell Eco-Marathon Competitors",
     heading: "Who We Are",
     paragraphs: [
