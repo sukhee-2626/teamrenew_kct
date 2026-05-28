@@ -494,3 +494,231 @@ header, section, footer, .doodle-car { position: relative; z-index: 1; }
   .footer-top { grid-template-columns: 1fr 1fr; }
   .plans-grid { grid-template-columns: 1fr; }
 }
+
+/* =============================================
+   CARD GRAPHICS - decorative pseudo-elements
+   ============================================= */
+
+/* VISMIS CARDS: dot-grid bg + corner ring */
+.vismis-card {
+  background: var(--card)
+    radial-gradient(circle, rgba(0,180,255,0.13) 1.2px, transparent 1.2px)
+    right 10px bottom 10px / 18px 18px;
+}
+.vismis-card::after {
+  content: '';
+  position: absolute;
+  bottom: -22px; right: -22px;
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  border: 16px solid rgba(0,180,255,0.08);
+  pointer-events: none;
+  transition: transform .4s ease, border-color .3s;
+}
+.vismis-card:hover::after { border-color: rgba(0,180,255,0.22); transform: scale(1.15); }
+
+/* PROJECT CARDS: dot bg + top-right arc */
+.project-card {
+  background: var(--card)
+    radial-gradient(circle, rgba(0,180,255,0.11) 1.2px, transparent 1.2px)
+    left 10px bottom 10px / 16px 16px;
+}
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: -28px; right: -28px;
+  width: 90px; height: 90px;
+  border-radius: 50%;
+  border: 18px solid rgba(0,180,255,0.08);
+  pointer-events: none;
+  transition: transform .45s, border-color .3s;
+}
+.project-card:hover::after { border-color: rgba(0,180,255,0.22); transform: scale(1.12) rotate(20deg); }
+
+/* ACTIVITY CARDS: left neon bar + dot bg */
+.activity-card {
+  border-left: 3px solid var(--neon);
+  box-shadow: -2px 0 12px rgba(0,180,255,0.18), 0 2px 8px rgba(0,180,255,0.05);
+  background: var(--card)
+    radial-gradient(circle, rgba(0,180,255,0.10) 1px, transparent 1px)
+    right 8px bottom 8px / 14px 14px;
+}
+.activity-card:hover { box-shadow: -3px 0 22px rgba(0,180,255,0.38), 0 6px 22px rgba(0,180,255,0.14); }
+
+/* BENEFIT CARDS: top-right bubble + dot grid */
+.benefit-card {
+  position: relative; overflow: hidden;
+  background: var(--card)
+    radial-gradient(circle, rgba(0,180,255,0.10) 1px, transparent 1px)
+    right 7px top 7px / 14px 14px;
+}
+.benefit-card::before {
+  content: '';
+  position: absolute;
+  top: -20px; right: -20px;
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: rgba(0,180,255,0.06);
+  border: 2px solid rgba(0,180,255,0.14);
+  pointer-events: none;
+  transition: transform .4s, background .3s;
+}
+.benefit-card:hover::before { transform: scale(1.25); background: rgba(0,180,255,0.12); }
+
+/* ACHIEVEMENT ITEMS: left bar + glow bead */
+.ach-item {
+  border-left: 2.5px solid var(--neon);
+  position: relative;
+  overflow: hidden;
+}
+.ach-item::before {
+  content: '';
+  position: absolute;
+  left: -6px; top: 50%; transform: translateY(-50%);
+  width: 11px; height: 11px;
+  border-radius: 50%;
+  background: rgba(0,180,255,0.3);
+  box-shadow: 0 0 8px rgba(0,180,255,0.55);
+  pointer-events: none;
+}
+
+/* ACHIEVEMENT HIGHLIGHT: corner bubble */
+.achievement-highlight {
+  position: relative; overflow: hidden;
+}
+.achievement-highlight::after {
+  content: '';
+  position: absolute;
+  top: -28px; right: -28px;
+  width: 110px; height: 110px;
+  border-radius: 50%;
+  background: rgba(0,180,255,0.05);
+  border: 18px solid rgba(0,180,255,0.10);
+  pointer-events: none;
+}
+
+/* TEAM CARDS: radial glow + dot bg */
+.team-card {
+  background: #fff
+    radial-gradient(circle, rgba(0,180,255,0.09) 1px, transparent 1px)
+    right 6px bottom 6px / 12px 12px;
+}
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 52%;
+  background: radial-gradient(ellipse at 50% 20%, rgba(0,180,255,0.10) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: var(--radius) var(--radius) 0 0;
+  z-index: 0;
+}
+.team-card > * { position: relative; z-index: 1; }
+
+/* DEPT CARDS: bottom-right ring */
+.dept-card { position: relative; overflow: hidden; }
+.dept-card::before {
+  content: '';
+  position: absolute;
+  bottom: -16px; right: -16px;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  border: 9px solid rgba(0,180,255,0.10);
+  pointer-events: none;
+  transition: transform .35s, border-color .3s;
+}
+.dept-card:hover::before { transform: scale(1.3); border-color: rgba(0,180,255,0.28); }
+
+/* EVENT CARDS: shimmer sweep on hover */
+.event-card { position: relative; overflow: hidden; }
+.event-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -80%;
+  width: 50%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(0,180,255,0.07), transparent);
+  transform: skewX(-20deg);
+  transition: left .6s ease;
+  pointer-events: none;
+}
+.event-card:hover::after { left: 140%; }
+
+/* GALLERY ITEMS: corner arc */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  top: -14px; right: -14px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 9px solid rgba(0,180,255,0.18);
+  pointer-events: none;
+  transition: transform .4s;
+  z-index: 2;
+}
+.gallery-item:hover::after { transform: scale(1.4); }
+
+/* CONTACT FORM: dot grid bg */
+.contact-form-wrap {
+  background: var(--card)
+    radial-gradient(circle, rgba(0,180,255,0.09) 1px, transparent 1px)
+    left 10px top 10px / 18px 18px;
+}
+
+/* PLAN CARDS: corner ring + dot bg */
+.plan-card {
+  position: relative; overflow: hidden;
+  background: var(--card)
+    radial-gradient(circle, rgba(0,180,255,0.09) 1px, transparent 1px)
+    right 8px bottom 8px / 16px 16px;
+}
+.plan-card::after {
+  content: '';
+  position: absolute;
+  top: -24px; right: -24px;
+  width: 75px; height: 75px;
+  border-radius: 50%;
+  border: 14px solid rgba(0,180,255,0.09);
+  pointer-events: none;
+}
+
+/* VALUES WRAP: dot bg */
+.values-wrap {
+  background: var(--card)
+    radial-gradient(circle, rgba(0,180,255,0.09) 1px, transparent 1px)
+    right 8px top 8px / 16px 16px;
+}
+
+/* JOIN CTA: animated floating rings */
+.join-cta { position: relative; overflow: hidden; }
+.join-cta::before {
+  content: '';
+  position: absolute;
+  top: -38px; left: -38px;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  border: 20px solid rgba(0,180,255,0.08);
+  pointer-events: none;
+  animation: ctaRing 9s linear infinite;
+}
+.join-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -30px; right: -30px;
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  border: 16px solid rgba(0,180,255,0.07);
+  pointer-events: none;
+  animation: ctaRing 11s linear infinite reverse;
+}
+@keyframes ctaRing {
+  0%   { transform: rotate(0deg) scale(1); }
+  50%  { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+/* SECTION-TAG: neon pulse */
+.section-tag { animation: tagPulse 3s ease-in-out infinite; }
+@keyframes tagPulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(0,180,255,0.12); }
+  50%       { box-shadow: 0 0 22px rgba(0,180,255,0.30), 0 0 6px rgba(0,180,255,0.15); }
+}
