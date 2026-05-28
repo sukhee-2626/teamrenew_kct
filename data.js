@@ -33,15 +33,17 @@ const CLUB_DATA = {
 
   about: {
     image: "images/about-new.png",
-    badge: "Shell Eco-Marathon Competitors",
-    heading: "Who We Are",
+    badge: "About Us",
+    heading: "Who We <span class='gradient-text'>Are</span>",
     paragraphs: [
-      "Team ReNew is a multidisciplinary student team from KCT, building hydrogen-powered vehicles and promoting clean mobility through innovation and engineering.",
+      "Team ReNew is a multidisciplinary student team dedicated to creating innovative and sustainable transportation solutions using renewable energy technologies. The team works on hydrogen-powered prototype vehicles, research projects, and advanced energy systems to promote clean mobility and environmental sustainability.",
+      "The team combines engineering, research, innovation, and teamwork to represent India on national and international platforms."
     ],
     features: [
-      "Hydrogen-powered vehicle design",
-      "International competition participation",
-      "Workshops & technical training",
+      "Hydrogen-powered prototype vehicle design",
+      "National & international competition participation",
+      "Hands-on workshops & technical training",
+      "Multidisciplinary cross-functional team"
     ],
   },
 
